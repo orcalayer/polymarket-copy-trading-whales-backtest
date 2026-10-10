@@ -1,0 +1,5 @@
+sport,test_month,train_months,wallets_in_train_and_test,spearman_train_vs_test,pos_wallets_plus_in_test,pos_wallets_active_in_test
+mlb,2026-07,2026-05 2026-06,1042,-0.01,3,11
+mlb,2026-08,2026-06 2026-07,1075,+0.15,11,16
+mlb,2026-09,2026-07 2026-08,849,+0.08,6,20
+mlb,2026-10,2026-08 2026-09,50,-0.03,4,8

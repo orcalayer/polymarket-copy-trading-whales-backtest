@@ -1,0 +1,21 @@
+$ python3 scripts/copy_backtest.py --league mlb --start 2026-05-01 --end 2026-09-30 --max-markets 800 --csv mlb_copies.csv
+mlb resolved game markets, end date 2026-05-01 .. 2026-09-30: reading 800
+
+$ python3 scripts/copy_backtest.py --load-csv mlb_copies.csv --start 2026-05-01 --end 2026-09-30
+copies (first buy per wallet and market, $20+, price 0.30-0.85): 161094 by 16196 wallets
+
+Result per $10 copied (their price + 1 cent, taker fee, held to resolution). Pick = the two months before the test
+month, both inside the period. t: standard errors clustered by market. Rank correlation: Spearman, pick vs test month.
+test     rule    wallets  pick mean    test mean        t  test copies
+2026-07  ALL10      1496      -0.57        -0.55     -3.3        18056
+2026-07  POS          14      +3.03        -0.47     -0.9          395
+2026-07  TOP10        10      +3.14        -0.17     -0.3          284
+2026-07  rank correlation pick -> test (wallets with >= 10 copies in both): -0.01, n 441
+2026-08  ALL10      1447      -0.51        -0.39     -2.3        16480
+2026-08  POS           7      +3.77        -1.69     -1.3           43
+2026-08  TOP10        10      +3.50        -1.29     -1.1           65
+2026-08  rank correlation pick -> test (wallets with >= 10 copies in both): -0.04, n 395
+2026-09  ALL10      1286      -0.45        -0.38     -1.8        11683
+2026-09  POS           4      +3.89        +0.73      0.4           22
+2026-09  TOP10        10      +2.98        +1.06      1.2          114
+2026-09  rank correlation pick -> test (wallets with >= 10 copies in both): +0.01, n 299
