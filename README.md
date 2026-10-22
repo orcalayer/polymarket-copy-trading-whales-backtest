@@ -92,7 +92,7 @@ the ranking does not carry over. Like the write-up's MLB tables, t uses standard
 How it differs from the write-up and how we checked it:
 - The write-up used every MLB market in our database. The script reads a sample of game markets through the API (here 800 games
   ending May 1 to September 30, so July to September are the test months), so the numbers are close to the write-up, not identical.
-  API trade data starts in April 2026.
+  API trade data starts on May 1, 2026.
 - `--load-csv` reruns the analysis on copies saved earlier with `--csv`, without calling the API again.
 - We ran the same rule on our own database for the same 800 markets: 161,094 copies in both, every wallet, price and result equal,
   total -$83,012.60 in both.

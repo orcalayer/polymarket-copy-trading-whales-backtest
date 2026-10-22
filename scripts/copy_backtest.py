@@ -26,7 +26,7 @@ Usage
   python3 copy_backtest.py --load-csv lol.csv --start 2026-05-01 --end 2026-09-30     # rerun the analysis, no API calls
 
 Differences from the write-up: the write-up used every market of the league in our database; this script reads a sample of game
-markets through the API (see --max-markets), so expect similar, not identical numbers. Trade data in the API starts in April 2026.
+markets through the API (see --max-markets), so expect similar, not identical numbers. Trade data in the API starts on May 1, 2026.
 Wallet flags such as "Smart Money" are deliberately not used: they are computed today, so they already know the test months.
 Only the Python 3.9+ standard library is used.
 """
@@ -215,7 +215,7 @@ def download(a, key):
 def main():
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
     ap.add_argument("--league", default="mlb", help="market slug prefix: mlb, nba, nfl, lol, val, ... (default mlb)")
-    ap.add_argument("--start", default="2026-05-01", help="first market end date, YYYY-MM-DD (data starts in April 2026)")
+    ap.add_argument("--start", default="2026-05-01", help="first market end date, YYYY-MM-DD (API trade data starts on 2026-05-01)")
     ap.add_argument("--end", default="2026-09-30", help="last market end date, YYYY-MM-DD")
     ap.add_argument("--max-markets", type=int, default=800, help="game markets to read, spread evenly over the period (0 = all)")
     ap.add_argument("--pause", type=float, default=0.15, help="seconds between requests (default 0.15)")
