@@ -1,8 +1,10 @@
 # Polymarket copy trading backtest: copying top whales in 5 sports
 
-**Issue 2, October 2026.** Research by the [OrcaLayer](https://orcalayer.com) team on on-chain Polymarket trades, August 2025 to October 2026.
+Built with the [OrcaLayer API](https://orcalayer.com/developers?utm_source=github&utm_medium=readme&utm_campaign=issue2): `scripts/copy_backtest.py` reruns this walk-forward test on it for any league.
 
-Write-up: [Polymarket Copy Trading: Why Top Whales Stop Winning](https://orcalayer.com/blog/polymarket-copy-trading-whales-backtest).
+**Issue 2, October 2026.** Research by the [OrcaLayer](https://orcalayer.com/?utm_source=github&utm_medium=readme&utm_campaign=issue2) team on on-chain Polymarket trades, August 2025 to October 2026.
+
+Write-up: [Polymarket Copy Trading: Why Top Whales Stop Winning](https://orcalayer.com/blog/polymarket-copy-trading-whales-backtest?utm_source=github&utm_medium=readme&utm_campaign=issue2&utm_content=article).
 Issue 1 (arbitrage, market making, copying pre-goal wallets): [polymarket-arbitrage-market-making-copy-trading-backtests](https://github.com/orcalayer/polymarket-arbitrage-market-making-copy-trading-backtests).
 
 ## The question
@@ -67,7 +69,7 @@ months (January 2026 is +$0.02 and +$0.09), and negative in all 5 months for bot
 
 ## Run the backtest yourself
 
-`scripts/copy_backtest.py` runs the same walk-forward test on the [OrcaLayer API](https://orcalayer.com/docs/api) for any league
+`scripts/copy_backtest.py` runs the same walk-forward test on the [OrcaLayer API](https://orcalayer.com/docs/api?utm_source=github&utm_medium=readme&utm_campaign=issue2) for any league
 (Python 3.9+ with the standard library only; needs a Premium API key):
 
 ```bash
@@ -105,7 +107,7 @@ How it differs from the write-up and how we checked it:
 
 The lesson of this backtest is that a few good months say little about a wallet. Before copying one, check how many markets its
 record covers. You can do that from Claude with the free
-[OrcaLayer MCP server](https://orcalayer.com/docs/mcp), no API key needed:
+[OrcaLayer MCP server](https://orcalayer.com/docs/mcp?utm_source=github&utm_medium=readme&utm_campaign=issue2), no API key needed:
 
 1. In Claude: Settings, Connectors, Add custom connector, URL `https://orcalayer.com/mcp`.
 2. Ask, for example:
@@ -116,8 +118,8 @@ record covers. You can do that from Claude with the free
      categories does it trade?"
 
 A large profit on a handful of markets is the pattern this backtest warns about. The
-[OrcaLayer methodology](https://orcalayer.com/methodology) explains how the Smart Money set and the skill badge separate a track
-record from luck. Full trade histories and walk-forward tests for any wallet are in the [OrcaLayer API](https://orcalayer.com/docs/api)
+[OrcaLayer methodology](https://orcalayer.com/methodology?utm_source=github&utm_medium=readme&utm_campaign=issue2) explains how the Smart Money set and the skill badge separate a track
+record from luck. Full trade histories and walk-forward tests for any wallet are in the [OrcaLayer API](https://orcalayer.com/docs/api?utm_source=github&utm_medium=readme&utm_campaign=issue2)
 (Premium).
 
 ## What is not here
